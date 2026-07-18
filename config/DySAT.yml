@@ -1,0 +1,48 @@
+gnn:
+- arch: transformer_attention
+  att_head: 2
+  combine: rnn
+  dim_edge_feat: 50
+  dim_out: 100
+  dim_time: 1
+  layer: 2
+memory:
+- dim_out: 0
+  type: none
+np:
+- a_tol: 1e-7
+  context_split: 0.1
+  h_dim: 256
+  l: 10
+  mem_size: 10
+  method: dopri5
+  old_as_context: true
+  out_dim: 256
+  r_dim: 256
+  r_tol: 1e-5
+  t_dim: 256
+  y_dim: 128
+  z_dim: 256
+sampling:
+- duration: 10000
+  history: 3
+  layer: 2
+  neighbor:
+  - 10
+  - 10
+  num_thread: 8
+  prop_time: true
+  strategy: uniform
+train:
+- all_on_gpu: true
+  att_dropout: 0.1
+  batch_size: 600
+  dropout: 0.1
+  epoch: 999
+  history_encoding_batch_size: 600
+  lr: 1.0e-04
+  patience: 5
+  test_batch_size: 100
+  test_split_num: 5
+  train_neg_size: 1
+  train_ratio: 0
