@@ -7,6 +7,8 @@ This repository contains a temporal graph learning workflow built around neural 
 - configuring model variants through YAML files,
 - training and evaluating the model from the command line.
 
+More detail at: [Report](https://github.com/DuongXi/Dynamic-Graph-based-Link-Prediction-for-Fraud-Detection/blob/master/Report/GraphML.pdf)
+
 ## Project structure
 
 - data_process__pt.py: converts raw edge CSV files into dataframe and feature files.
